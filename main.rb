@@ -6,7 +6,7 @@ server = WEBrick::HTTPServer.new(
   Port: 8000
 )
 
-ser.mount_prock('/') dp |req, res|
+ser.mount_prock('/') do |req, res|
   res.body = 'Hello, World!'
 end
 
